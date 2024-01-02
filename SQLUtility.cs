@@ -19,6 +19,9 @@ namespace CPUFramework
             cmd.CommandText = sqlstatement;
             var dr = cmd.ExecuteReader();
             dt.Load(dr);
+
+            SetAllColumnsAllowNull(dt);
+
             return dt;
         }
 
